@@ -1,0 +1,37 @@
+$baseSize: 14px;
+
+$ubuntu: 'Ubuntu', sans-serif;
+
+$borderRadius: 45px;
+$btnRadius: 10px;
+
+//animations
+$bg-transition: 0.25s;
+$text-transition: 0.25s;
+$opacity-transition: 0.25s;
+
+%animation {
+  transition-property: background-color, color, opacity;
+  transition-duration: $bg-transition, $text-transition, $opacity-transition;
+  transition-timing-function: ease-out;
+}
+
+//color definitions
+$red: #d5152d;
+$orange: #ffcc00;
+$white: #ffffff;
+$black: #000000;
+
+//elements color
+$btnBg: $red;
+$btnFontColor: $white;
+$btnHoverBg: $black;
+
+$navBarBg: $red;
+$navBarLogoFontColor: $white;
+$navIconsColor: $white;
+$navIconsHoverColor: $black;
+$navCartBg: $orange;
+$navCartCounterBg: $red;
+$navCartCounterHoverColor: $white;
+$navCartTotalPriceColor: $black;

@@ -6,9 +6,11 @@ import PropTypes from 'prop-types';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
 
+import TopBar from '../TopBar/TopBar';
+
 const Header = () => (
   <div className={styles.root}>
-    <h2>Header</h2>
+    <TopBar />
   </div>
 );
 

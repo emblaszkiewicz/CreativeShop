@@ -32,7 +32,7 @@ let dbUri = '';
 
 if(NODE_ENV === 'production') dbUri = 'url to remote db';
 else if(NODE_ENV === 'test') dbUri = 'mongodb://localhost:27017/CreativeShopDB';
-else dbUri = 'mongodb://localhost:27017/companyDB';
+else dbUri = 'mongodb://localhost:27017/CreativeShopDB';
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;

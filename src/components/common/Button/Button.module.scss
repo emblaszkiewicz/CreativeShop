@@ -1,0 +1,21 @@
+@import '../../../../src/styles/settings.scss';
+
+.root {
+  @extend %animation;
+  width: 130px;
+  height: 41px;
+  line-height: 41px;
+  color: $btnFontColor;
+  background: $btnBg;
+  border: none;
+  border-radius: $btnRadius;
+  cursor: pointer;
+
+  &.searchBtn {
+    border-radius: $borderRadius;
+  }
+
+  &:hover {
+    background: $btnHoverBg;
+  }
+}
