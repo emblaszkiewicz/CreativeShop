@@ -1,0 +1,36 @@
+@import "../../../../src/styles/settings.scss";
+
+.root {
+  width: 100%;
+  background: $navBarBg;
+  overflow: hidden;
+
+  ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    column-gap: 50px;
+
+    li {
+      position: relative;
+      text-transform: uppercase;
+
+      &:hover {
+        font-weight: 700;
+      }
+    }
+  }
+
+  .active {
+    border-bottom: solid 2px $navBarActiveColor;
+  }
+}
+
+@media (max-width: 767px) {
+  .root {
+    ul {
+      column-gap: 25px;
+    }
+  }
+}
