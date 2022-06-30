@@ -9,11 +9,12 @@ $btnRadius: 10px;
 $bg-transition: 0.25s;
 $text-transition: 0.25s;
 $opacity-transition: 0.25s;
+$transition-time: 0.25s;
 
 %animation {
   transition-property: background-color, color, opacity;
   transition-duration: $bg-transition, $text-transition, $opacity-transition;
-  transition-timing-function: ease-out;
+  transition: all ease-in-out $transition-time;
 }
 
 //color definitions

@@ -9,21 +9,39 @@
     display: flex;
     justify-content: center;
     padding: 0;
+    margin: 0;
     list-style: none;
     column-gap: 50px;
 
-    li {
+    a {
+      padding: 15px 0;
       position: relative;
       text-transform: uppercase;
+      text-decoration: none;
 
-      &:hover {
-        font-weight: 700;
+      &.active {
+        border-bottom: solid 2px $navBarActiveColor;
+      }
+
+      &:visited {
+        color: inherit;
+      }
+
+      &::after {
+        @extend %animation;
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        background: $navBarActiveColor;
+        left: 0;
+        bottom: 0;
+      }
+
+      &:hover::after {
+        width: 100%;
       }
     }
-  }
-
-  .active {
-    border-bottom: solid 2px $navBarActiveColor;
   }
 }
 

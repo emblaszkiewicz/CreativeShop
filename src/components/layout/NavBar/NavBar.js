@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './NavBar.module.scss';
 
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 // import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
@@ -11,10 +12,10 @@ import PropTypes from 'prop-types';
 const NavBar = () => (
   <nav className={styles.root}>
     <ul>
-      <li className={styles.active}>Home</li>
-      <li>Shop</li>
-      <li>About us</li>
-      <li>Contact</li>
+      <NavLink to='/' className={styles.active}>Home</NavLink>
+      <NavLink to='/shop'>Shop</NavLink>
+      <NavLink to='/about'>About us</NavLink>
+      <NavLink to='/contact'>Contact</NavLink>
     </ul>
   </nav>
 );
