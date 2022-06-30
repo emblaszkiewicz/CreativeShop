@@ -2,8 +2,10 @@ $baseSize: 14px;
 
 $ubuntu: 'Ubuntu', sans-serif;
 
+//radius
 $borderRadius: 45px;
 $btnRadius: 10px;
+$inputRadius: 5px;
 
 //animations
 $bg-transition: 0.25s;
@@ -22,8 +24,12 @@ $red: #d5152d;
 $orange: #ffcc00;
 $white: #ffffff;
 $black: #000000;
+$grey-light: #fafafa;
+$grey: #e7e7e7;
 
 //elements color
+$bodyBg: $white;
+
 $btnBg: $red;
 $btnFontColor: $white;
 $btnHoverBg: $black;
@@ -38,3 +44,7 @@ $topBarCartTotalPriceColor: $black;
 
 $navBarBg: $white;
 $navBarActiveColor: $red;
+
+$formIconBg: $grey-light;
+$formIconColor: $red;
+$formInputBorder: $grey;

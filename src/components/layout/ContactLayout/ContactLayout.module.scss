@@ -1,0 +1,52 @@
+@import "../../../../src/styles/settings.scss";
+
+.root {
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  h3 {
+    text-transform: uppercase;
+    margin: 25px 0;
+  }
+
+  .info {
+    width: 300px;
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      color: $formIconColor;
+      background: $formIconBg;
+      font-size: ($baseSize * 1.4);
+    }
+  }
+
+  .infoBox {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 45px;
+
+    .infoBoxContent {
+      h4 {
+        margin: 0 0 5px 0;
+      }
+
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .root {
+    h3 {
+      text-align: center;
+    }
+  }
+}

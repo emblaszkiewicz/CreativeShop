@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
 
-// import Components;
+import ContactLayout from '../../layout/ContactLayout/ContactLayout';
 
 const Contact = () => (
   <div className={styles.root}>
-    <h2>Contact</h2>
+    <ContactLayout />
   </div>
 );
 
