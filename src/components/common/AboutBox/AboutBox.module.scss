@@ -1,0 +1,28 @@
+@import "../../../../src/styles/settings.scss";
+
+.root {
+  background: $aboutBoxBg;
+  border: solid 1px $aboutBoxBg;
+  padding: 15px;
+  border-radius: $boxRadius;
+
+  .icon {
+    color: $aboutBoxFontColor;
+    font-size: ($baseSize * 2.5);
+  }
+
+  p {
+    font-size: ($baseSize / 1.2);
+  }
+
+  &:hover {
+    background: #fff;
+    border: solid 1px red;
+  }
+}
+
+@media (max-width: 769px) {
+  .root {
+    margin: 15px 0;
+  }
+}

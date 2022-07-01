@@ -6,6 +6,8 @@ $ubuntu: 'Ubuntu', sans-serif;
 $borderRadius: 45px;
 $btnRadius: 10px;
 $inputRadius: 5px;
+$imgRadius: 5px;
+$boxRadius: 5px;
 
 //animations
 $bg-transition: 0.25s;
@@ -24,8 +26,9 @@ $red: #d5152d;
 $orange: #ffcc00;
 $white: #ffffff;
 $black: #000000;
-$grey-light: #fafafa;
+$greyLight: #fafafa;
 $grey: #e7e7e7;
+$greyDark: #818181;
 
 //elements color
 $bodyBg: $white;
@@ -45,7 +48,16 @@ $topBarCartTotalPriceColor: $black;
 $navBarBg: $white;
 $navBarActiveColor: $red;
 
-$formIconBg: $grey-light;
+$formIconBg: $greyLight;
 $formIconColor: $red;
 $formInputBorder: $grey;
 $formErrorFontColor: $red;
+
+$aboutBoxBg: $greyLight;
+$aboutBoxFontColor: $red;
+
+$workerBoxBg: $greyLight;
+$workerBoxFontColor: $black;
+$workerBoxIconColor: $red;
+$workerHoverBg: $red;
+$workerHoverFontColor: $white;

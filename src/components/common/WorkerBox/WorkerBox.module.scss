@@ -1,0 +1,60 @@
+@import "../../../../src/styles/settings.scss";
+
+.root {
+  .workerImg {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: $imgRadius;
+  }
+
+  .workerDesc {
+    padding: 15px 0;
+    text-align: center;
+    color: $workerBoxFontColor;
+    background: $workerBoxBg;
+    border-radius: $boxRadius;
+
+    p {
+      margin: 0;
+    }
+
+    h4 {
+      margin-top: 5px;
+    }
+
+    .icons {
+      color: $workerBoxIconColor;
+
+      .icon {
+        padding: 0 5px;
+        cursor: pointer;
+      }
+    }
+
+    &:hover {
+      background: $workerHoverBg;
+
+      .icons {
+        color: $workerHoverFontColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .root {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 1025px) {
+  .root {
+    margin: 15px 0;
+
+    .workerImg {
+      width: 160px;
+      height: 210px;
+    }
+  }
+}
