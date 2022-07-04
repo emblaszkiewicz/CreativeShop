@@ -39,6 +39,7 @@ const AboutLayout = () => (
     </div>
     <div className={styles.row}>
       <img className={styles.headImage} src='../../images/meeting1.jpg' alt='test' />
+      <img className={styles.headImage} src='../../images/meeting1.jpg' alt='test' />
     </div>
     <div className={styles.row}>
       <div className={styles.headText}>

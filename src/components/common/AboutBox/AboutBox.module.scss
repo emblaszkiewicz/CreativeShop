@@ -1,6 +1,8 @@
 @import "../../../../src/styles/settings.scss";
 
 .root {
+  max-width: 410px;
+  margin: 15px 0;
   background: $aboutBoxBg;
   border: solid 1px $aboutBoxBg;
   padding: 15px;

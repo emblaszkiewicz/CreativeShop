@@ -6,14 +6,16 @@
   .row {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     column-gap: 40px;
     margin: 30px 0;
 
     .headText {
       margin: 0 auto;
       text-align: justify;
+      max-width: 600px;
 
       h3 {
         margin: 5px 0 10px 0;
@@ -32,9 +34,10 @@
     }
 
     .headImage {
-      width: 100%;
+      max-width: 600px;
       height: 400px;
       object-fit: cover;
+      margin: 15px 0;
       border-radius: $imgRadius;
     }
   }
@@ -47,7 +50,7 @@
       padding: 0 15px;
 
       .headImage {
-        width: 300px;
+        width: 80%;
         height: auto;
       }
     }
