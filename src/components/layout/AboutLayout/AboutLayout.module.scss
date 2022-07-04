@@ -37,13 +37,13 @@
       max-width: 600px;
       height: 400px;
       object-fit: cover;
-      margin: 15px 0;
+      margin: 15px auto;
       border-radius: $imgRadius;
     }
   }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1025px) {
   .root {
     .row {
       flex-direction: column;
