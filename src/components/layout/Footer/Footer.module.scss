@@ -1,4 +1,71 @@
-@import '../../../../src/styles/settings.scss';
+@import "../../../../src/styles/settings.scss";
 
-// .root {
-// }
+.root {
+  width: 100%;
+  background: $footerBg;
+  overflow: hidden;
+
+  .footerContent {
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .footerBox {
+      width: 260px;
+      border-right: solid 1px $footerBorderColor;
+
+      &:last-child {
+        border: none;
+      }
+
+      h3 {
+        text-transform: uppercase;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li,
+        a {
+          padding: 5px 0;
+          text-decoration: none;
+          color: $footerFontColor;
+        }
+
+        .icon {
+          color: $footerIconColor;
+          padding-right: 5px;
+        }
+
+        input {
+          height: 41px;
+          border: none;
+          outline: none;
+          border-radius: $inputRadius;
+          margin-right: 5px;
+          padding-left: 10px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    height: 45px;
+    line-height: 45px;
+    color: $footerCopyrightFontColor;
+    background: $footerCopyrightBg;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1025px) {
+  .root {
+    .footerContent {
+      .footerBox {
+        border: none;
+        margin: 15px auto;
+        text-align: center;
+      }
+    }
+  }
+}

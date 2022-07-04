@@ -29,11 +29,13 @@ $black: #000000;
 $greyLight: #fafafa;
 $grey: #e7e7e7;
 $greyDark: #818181;
+$greyHard: #3d3d3d;
 
 //elements color
 $bodyBg: $white;
 
 $btnBg: $red;
+$btnSmallBg: $white;
 $btnFontColor: $white;
 $btnHoverBg: $black;
 
@@ -61,3 +63,10 @@ $workerBoxFontColor: $black;
 $workerBoxIconColor: $red;
 $workerHoverBg: $red;
 $workerHoverFontColor: $white;
+
+$footerBg: $greyLight;
+$footerFontColor: $greyDark;
+$footerBorderColor: $grey;
+$footerIconColor: $red;
+$footerCopyrightFontColor: $white;
+$footerCopyrightBg: $greyHard;
