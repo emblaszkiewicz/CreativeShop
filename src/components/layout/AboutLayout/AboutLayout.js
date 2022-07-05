@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './AboutLayout.module.scss';
 
+import { faServer, faBoxOpen, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
+
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
@@ -27,9 +29,18 @@ const AboutLayout = () => (
       </div>
     </div>
     <div className={styles.row}>
-      <AboutBox />
-      <AboutBox />
-      <AboutBox />
+      <AboutBox
+        icon={faServer}
+        title='Our Vision'
+        text='Sed molestie auctor nisi, ut porta ex condimentum eget. Etiam velit nibh, gravida eget ligula vitae, sodales fringilla.' />
+      <AboutBox
+        icon={faBoxOpen}
+        title='History of beginning'
+        text='Proin viverra, lacus sit amet tincidunt lobortis, turpis nibh vestibulum eros, nec pulvinar lorem nisi vel mauris. Suspendisse.' />
+      <AboutBox
+        icon={faLayerGroup}
+        title='What we really do?'
+        text='Morbi sed tempor odio, sit amet aliquet leo. In vel lobortis elit, sed lobortis nunc. Vestibulum tristique laoreet.' />
     </div>
     <div className={styles.row}>
       <div className={styles.headText}>

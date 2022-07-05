@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './AboutBox.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faServer } from '@fortawesome/free-solid-svg-icons';
 
 import PropTypes from 'prop-types';
 // import clsx from 'clsx';
@@ -11,15 +10,18 @@ import PropTypes from 'prop-types';
 
 // import Components;
 
-const AboutBox = () => (
+const AboutBox = ({ icon, title, text }) => (
   <div className={styles.root}>
-    <FontAwesomeIcon icon={faServer} className={styles.icon} />
-    <h3>Our Vision</h3>
-    <p>Sed molestie auctor nisi, ut porta ex condimentum eget. Etiam velit nibh, gravida eget ligula vitae, sodales fringilla.</p>
+    <FontAwesomeIcon icon={icon} className={styles.icon} />
+    <h3>{title}</h3>
+    <p>{text}</p>
   </div>
 );
 
 AboutBox.propTypes = {
+  icon: PropTypes.object,
+  title: PropTypes.string,
+  text: PropTypes.string,
 };
 
 export default AboutBox;
