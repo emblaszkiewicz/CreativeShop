@@ -1,0 +1,36 @@
+@import "../../../../src/styles/settings.scss";
+
+.root {
+  min-height: 300px;
+  justify-content: space-around;
+  align-items: center;
+  background: url('../../../../public/images/Banner/bannerBg.jpg');
+  border-radius: $boxRadius;
+
+  .bannerContent {
+    margin: 60px 0;
+    padding: 0 20px;
+    width: 600px;
+    height: 169px;
+
+    h4,
+    h1 {
+      margin: 0;
+    }
+
+    h1 {
+      color: $bannerHeaderFontColor;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: $bannerParagraphFontColor;
+    }
+  }
+
+  img {
+    margin: 60px 0;
+    width: 197px;
+    height: 237px;
+  }
+}
