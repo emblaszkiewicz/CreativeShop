@@ -1,0 +1,39 @@
+@import '../../../../src/styles/settings.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 155px;
+  border: solid 1px $featureBoxBorderColor;
+  border-radius: $boxRadius;
+
+  h3 {
+    margin: 5px auto auto auto;
+  }
+
+  &:hover {
+    border: solid 1px $featureBoxBorderHoverColor;
+  }
+
+  .iconContainer {
+    display: flex;
+    width: 70px;
+    height: 70px;
+    margin: auto auto 5px auto;
+    border-radius: 50%;
+    background: $featureBoxIconContainerBg;
+  }
+
+  .icon {
+    margin: auto;
+    font-size: ($baseSize * 2);
+    color: $featureBoxIconColor;
+  }
+}
+
+@media (max-width: 1025px) {
+  .root {
+    margin: 15px auto;
+  }
+}

@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
 
 const WorkerBox = () => (
   <div className={styles.root}>
-    <img className={styles.workerImg} src='../../images/employee1.jpg' alt='employee' />
+    <img className={styles.workerImg} src='../../images/Employees/employee1.jpg' alt='employee' />
     <div className={styles.workerDesc}>
       <p>Finace Manager</p>
       <h4>Miguel Rodrigez</h4>
