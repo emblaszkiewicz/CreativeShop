@@ -6,13 +6,15 @@ import PropTypes from 'prop-types';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
 
+import ProductsBar from '../../layout/ProductsBar/ProductsBar';
 import FeatureBar from '../../layout/FeatureBar/FeatureBar';
 import Banner from '../../layout/Banner/Banner';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 
 const Home = () => (
   <div className={styles.root}>
-    <h2>Home</h2>
+    <ProductsBar title='Sale' />
+    <ProductsBar title='Featured' />
     <FeatureBar />
     <Banner />
     <BrandsBar />

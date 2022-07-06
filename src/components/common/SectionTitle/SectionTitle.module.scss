@@ -1,0 +1,40 @@
+@import "../../../../src/styles/settings.scss";
+
+.root {
+  margin: 20px auto -60px auto;
+
+  .title {
+    position: relative;
+    width: 100%;
+
+    &::before {
+      position: absolute;
+      width: 120px;
+      height: 3px;
+      content: "";
+      bottom: -1px;
+      z-index: 2;
+      background: $red;
+    }
+
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      content: "";
+      bottom: 0;
+      z-index: 1;
+      background: $grey;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .root {
+    .title {
+      h2 {
+        padding: 0 15px;
+      }
+    }
+  }
+}

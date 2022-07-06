@@ -1,0 +1,56 @@
+@import '../../../../src/styles/settings.scss';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  margin: 40px 0;
+  background: $productBoxBg;
+  border-radius: $boxRadius;
+  cursor: pointer;
+
+  img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 25px auto 0 auto;
+  }
+
+  .boxContent {
+    position: relative;
+    margin-left: 25px;
+    padding: 25px 0;
+
+    p {
+      margin-bottom: 5px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    .benefits {
+      position: absolute;
+      right: 15px;
+      top: 40px;
+      width: 60px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      background: $productBoxBenefitsBg;
+      color: $productBoxBenefitsFontColor;
+      font-size: ($baseSize / 1.2);
+      border-radius: $boxRadius;
+
+      &:last-child {
+        top: 70px;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .root {
+    margin: 15px auto;
+  }
+}
