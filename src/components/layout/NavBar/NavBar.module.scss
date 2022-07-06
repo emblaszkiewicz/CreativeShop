@@ -19,10 +19,6 @@
       text-transform: uppercase;
       text-decoration: none;
 
-      &.active {
-        border-bottom: solid 2px $navBarActiveColor;
-      }
-
       &:visited {
         color: inherit;
       }
@@ -32,8 +28,7 @@
         position: absolute;
         content: "";
         width: 0;
-        height: 2px;
-        background: $navBarActiveColor;
+        border-bottom: solid 3px $navBarActiveColor;
         left: 0;
         bottom: 0;
       }

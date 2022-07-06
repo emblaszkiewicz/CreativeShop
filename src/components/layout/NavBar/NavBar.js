@@ -12,7 +12,7 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => (
   <nav className={styles.root}>
     <ul>
-      <NavLink to='/' className={styles.active}>Home</NavLink>
+      <NavLink to='/'>Home</NavLink>
       <NavLink to='/shop'>Shop</NavLink>
       <NavLink to='/about'>About us</NavLink>
       <NavLink to='/contact'>Contact</NavLink>
