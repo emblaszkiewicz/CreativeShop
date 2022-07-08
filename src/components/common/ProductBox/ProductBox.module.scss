@@ -1,6 +1,7 @@
 @import '../../../../src/styles/settings.scss';
 
 .root {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 250px;
@@ -9,11 +10,18 @@
   border-radius: $boxRadius;
   cursor: pointer;
 
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
+
   img {
     width: 200px;
     height: 200px;
     object-fit: contain;
     margin: 25px auto 0 auto;
+    opacity: 0.8;
   }
 
   .boxContent {
