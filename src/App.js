@@ -11,6 +11,7 @@ import About from '../src/components/views/About/About';
 import Contact from '../src/components/views/Contact/Contact';
 import Login from '../src/components/views/Login/Login';
 import Favorites from '../src/components/views/Favorites/Favorites';
+import Cart from '../src/components/views/Cart/Cart';
 import ProductPage from '../src/components/views/ProductPage/ProductPage';
 
 const App = () => (
@@ -24,6 +25,7 @@ const App = () => (
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
         <Route path='/favorites' element={<Favorites />} />
+        <Route path='/cart' element={<Cart />} />
         <Route path='/product/:id' element={<ProductPage />} />
       </Routes>
     </MainLayout>

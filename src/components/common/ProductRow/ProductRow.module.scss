@@ -4,10 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  height: 60px;
   padding: 40px 15px;
-  border: solid 1px $favoritesBorderColor;
+  border: solid 1px $productRowBorderColor;
   border-top: none;
 
   &:last-child {
@@ -21,11 +21,11 @@
 
     .icon {
       @extend %animation;
-      color: $favoritesIconColor;
+      color: $productRowIconColor;
       cursor: pointer;
 
       &:hover {
-        color: $favoritesIconHoverColor;
+        color: $productRowIconHoverColor;
       }
     }
 
@@ -38,6 +38,29 @@
 
     span {
       padding: 0 50px;
+    }
+
+    input {
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      border: solid 1px $productRowBorderColor;
+      outline: none;
+    }
+  }
+}
+
+@media (max-width: 824px) {
+  .root {
+    .desc {
+      padding: 25px 0;
+      img {
+        margin: 0 15px;
+      }
+
+      span {
+        padding: 0 15px;
+      }
     }
   }
 }

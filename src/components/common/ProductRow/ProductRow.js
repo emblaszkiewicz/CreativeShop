@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './FavoriteBox.module.scss';
+import styles from './ProductRow.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
@@ -11,19 +11,25 @@ import PropTypes from 'prop-types';
 
 import Button from '../Button/Button';
 
-const FavoriteBox = () => (
+const ProductRow = ({ actionText }) => (
   <div className={styles.root}>
     <div className={styles.desc}>
       <FontAwesomeIcon icon={faClose} className={styles.icon} />
       <img src='../../images/Products/tshirts/tshirtGrey.png' alt='' />
       <span>T-shirt Grey</span>
       <span>$49</span>
+      {(actionText === 'Recalculate') &&
+        <span>
+          Quantity: <input type='text' placeholder='1' />
+        </span>
+      }
     </div>
-    <Button>Add to cart</Button>
+    <Button>{actionText}</Button>
   </div>
 );
 
-FavoriteBox.propTypes = {
+ProductRow.propTypes = {
+  actionText: PropTypes.string,
 };
 
-export default FavoriteBox;
+export default ProductRow;

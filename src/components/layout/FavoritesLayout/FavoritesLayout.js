@@ -6,17 +6,16 @@ import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
 
-import FavoriteBox from '../../common/FavoriteBox/FavoriteBox';
+import ProductRow from '../../common/ProductRow/ProductRow';
 
 const FavoritesLayout = () => (
   <div className={clsx('container', styles.root)}>
     <div className={styles.header}>
-      <span>Product name</span>
-      <span>Price</span>
+      <span>Favorites</span>
     </div>
-    <FavoriteBox />
-    <FavoriteBox />
-    <FavoriteBox />
+    <ProductRow actionText='Add to cart' />
+    <ProductRow actionText='Add to cart' />
+    <ProductRow actionText='Add to cart' />
   </div>
 );
 

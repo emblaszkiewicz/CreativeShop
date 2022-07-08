@@ -1,9 +1,9 @@
 import { render, screen, cleanup } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import FavoriteBox from './FavoriteBox';
+import ProductRow from './ProductRow';
 
-describe('Component FavoriteBox', () => {
+describe('Component ProductRow', () => {
   it('should render without crashing', () => {
-    render(<FavoriteBox action={() => { }} />);
+    render(<ProductRow action={() => { }} />);
   });
 });
