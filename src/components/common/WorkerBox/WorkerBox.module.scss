@@ -28,9 +28,9 @@
 
     .icons {
       @extend %animation;
-      color: $workerBoxIconColor;
 
       .icon {
+        color: $workerBoxIconColor;
         padding: 0 5px;
         cursor: pointer;
       }
@@ -39,7 +39,7 @@
     &:hover {
       background: $workerHoverBg;
 
-      .icons {
+      .icon {
         color: $workerHoverFontColor;
       }
     }

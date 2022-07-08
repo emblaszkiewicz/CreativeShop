@@ -19,10 +19,10 @@ const Footer = () => (
         <h3>Account</h3>
         <ul>
           <li>
-            <NavLink to='/'>Log in</NavLink>
+            <NavLink to='/login'>Log in</NavLink>
           </li>
           <li>
-            <NavLink to='/'>Checkout</NavLink>
+            <NavLink to='/cart'>Checkout</NavLink>
           </li>
         </ul>
       </div>

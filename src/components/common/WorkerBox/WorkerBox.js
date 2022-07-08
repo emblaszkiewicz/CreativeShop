@@ -2,9 +2,10 @@ import React from 'react';
 import styles from './WorkerBox.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLink } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedinIn, faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 // import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
@@ -18,10 +19,17 @@ const WorkerBox = () => (
       <p>Finace Manager</p>
       <h4>Miguel Rodrigez</h4>
       <div className={styles.icons}>
-        <FontAwesomeIcon icon={faLink} className={styles.icon} />
-        <FontAwesomeIcon icon={faLink} className={styles.icon} />
-        <FontAwesomeIcon icon={faLink} className={styles.icon} />
-        <FontAwesomeIcon icon={faLink} className={styles.icon} />
+        <NavLink to='/' target="_blank">
+          <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
+        </NavLink>
+        <NavLink to='/' target="_blank">
+          <FontAwesomeIcon icon={faFacebook} className={styles.icon} />
+        </NavLink>
+        <NavLink to='/' target="_blank">
+          <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
+        </NavLink>
+        <NavLink to='/' target="_blank">
+          <FontAwesomeIcon icon={faTwitter} className={styles.icon} /></NavLink>
       </div>
     </div>
   </div>

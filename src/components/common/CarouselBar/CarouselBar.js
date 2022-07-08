@@ -4,6 +4,7 @@ import 'react-responsive-carousel/lib/styles/carousel.css';
 import { Carousel } from 'react-responsive-carousel';
 
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 // import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
@@ -19,7 +20,9 @@ const CarouselBar = () => (
           <span>Checkout our</span>
           <h1>Personalized T-shirts</h1>
           <p>Proin sollicitudin rhoncus hendrerit. Suspendisse vitae risus nulla. Fusce eu risus sem. Nunc id nisi volutpat, interdum purus.</p>
-          <Button>See more!</Button>
+          <NavLink to='/shop'>
+            <Button>See more!</Button>
+          </NavLink>
         </div>
       </div>
       <div>
@@ -28,7 +31,9 @@ const CarouselBar = () => (
           <span>Checkout our</span>
           <h1>Personalized T-shirts</h1>
           <p>Proin sollicitudin rhoncus hendrerit. Suspendisse vitae risus nulla. Fusce eu risus sem. Nunc id nisi volutpat, interdum purus.</p>
-          <Button>See more!</Button>
+          <NavLink to='/shop'>
+            <Button>See more!</Button>
+          </NavLink>
         </div>
       </div>
       <div>
@@ -37,7 +42,9 @@ const CarouselBar = () => (
           <span>Checkout our</span>
           <h1>Personalized T-shirts</h1>
           <p>Proin sollicitudin rhoncus hendrerit. Suspendisse vitae risus nulla. Fusce eu risus sem. Nunc id nisi volutpat, interdum purus.</p>
-          <Button>See more!</Button>
+          <NavLink to='/shop'>
+            <Button>See more!</Button>
+          </NavLink>
         </div>
       </div>
     </Carousel>

@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 import PropTypes from 'prop-types';
+import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
@@ -13,7 +14,9 @@ import Button from '../../common/Button/Button';
 
 const SingleProduct = () => (
   <div className={clsx('container', styles.root)}>
-    <FontAwesomeIcon icon={faArrowAltCircleLeft} className={styles.icon} />
+    <NavLink to='/shop'>
+      <FontAwesomeIcon icon={faArrowAltCircleLeft} className={styles.icon} />
+    </NavLink>
     <div className={styles.imgContainer}>
       <img src='../../images/Products/tshirts/tshirtGrey.png' alt='' />
     </div>

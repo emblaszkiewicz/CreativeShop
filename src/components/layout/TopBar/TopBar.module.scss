@@ -57,6 +57,10 @@
       font-size: ($baseSize * 1.4);
       cursor: pointer;
 
+      a {
+        color: $topBarIconsColor;
+      }
+
       .icon {
         @extend %animation;
       }
