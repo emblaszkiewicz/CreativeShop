@@ -8,6 +8,7 @@ import PropTypes from 'prop-types';
 
 import CarouselBar from '../../common/CarouselBar/CarouselBar';
 import ProductsBar from '../../layout/ProductsBar/ProductsBar';
+import OpinionsBar from '../../layout/OpinionsBar/OpinionsBar';
 import FeatureBar from '../../layout/FeatureBar/FeatureBar';
 import Banner from '../../layout/Banner/Banner';
 import BrandsBar from '../../layout/BrandsBar/BrandsBar';
@@ -17,6 +18,7 @@ const Home = () => (
     <CarouselBar />
     <ProductsBar title='Sale' />
     <ProductsBar title='Featured' />
+    <OpinionsBar />
     <FeatureBar />
     <Banner />
     <BrandsBar />
