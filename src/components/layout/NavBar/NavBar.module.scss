@@ -19,6 +19,10 @@
       text-transform: uppercase;
       text-decoration: none;
 
+      &.active {
+        color: green;
+      }
+
       &:visited {
         color: inherit;
       }

@@ -38,6 +38,7 @@ const FilterBox = () => {
         </div>
         {(visability || width > 1221) &&
           <ul>
+            <li>Show all</li>
             <li>T-shirts</li>
             <li>Hats</li>
             <li>Mugs</li>

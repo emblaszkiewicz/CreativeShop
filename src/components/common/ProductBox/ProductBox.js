@@ -8,14 +8,18 @@ import PropTypes from 'prop-types';
 
 // import Components;
 
-const ProductBox = () => (
+const ProductBox = product => (
   <div className={styles.root}>
-    <img src='../../images/Products/tshirts/tshirtGrey.png' alt='' />
+    <img src={product.image} alt='' />
     <div className={styles.boxContent}>
-      <p>T-shirt Grey</p>
-      <span>$49</span>
-      <div className={styles.benefits}>Sale!</div>
-      <div className={styles.benefits}>Featured</div>
+      <p>{product.name}</p>
+      <span>${product.price}</span>
+      {product.sale &&
+        <div className={styles.benefits}>Sale!</div>
+      }
+      {product.featured &&
+        <div className={styles.benefits}>Featured</div>
+      }
     </div>
   </div>
 );

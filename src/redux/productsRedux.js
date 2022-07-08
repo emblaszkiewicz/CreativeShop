@@ -1,6 +1,7 @@
 // import { API_URL } from '../config';
 
 /* selectors */
+export const getAllProducts = ({ products }) => products;
 
 /* action name creator */
 const reducerName = 'products';
