@@ -11,7 +11,7 @@ import clsx from 'clsx';
 const Button = ({ variant, children }) => {
 
   const classes = [];
-  if(variant) classes.push(styles[variant]);
+  if(variant) classes.push(styles[variant],);
 
   return (
     <button className={clsx(styles.root, classes)}>
