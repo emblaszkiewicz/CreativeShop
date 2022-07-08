@@ -6,11 +6,11 @@ import PropTypes from 'prop-types';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
 
-// import Components;
+import ShopLayout from '../../layout/ShopLayout/ShopLayout';
 
 const Shop = () => (
   <div className={styles.root}>
-    <h2>Shop</h2>
+    <ShopLayout />
   </div>
 );
 
