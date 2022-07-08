@@ -37,6 +37,7 @@
       list-style: none;
 
       li {
+        @extend %animation;
         padding: 15px 0;
         cursor: pointer;
 

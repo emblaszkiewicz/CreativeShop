@@ -1,6 +1,7 @@
 @import '../../../../src/styles/settings.scss';
 
 .root {
+  @extend %animation;
   display: flex;
   flex-direction: column;
   width: 300px;

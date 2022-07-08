@@ -1,0 +1,23 @@
+@import '../../../../src/styles/settings.scss';
+
+.root {
+  .header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: solid 1px $favoritesBorderColor;
+    border-top-left-radius: $boxRadius;
+    border-top-right-radius: $boxRadius;
+  }
+
+  span {
+    padding-left: 208px;
+
+    &:last-child {
+      padding-left: 70px;
+    }
+  }
+}

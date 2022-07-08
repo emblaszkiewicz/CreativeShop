@@ -1,0 +1,43 @@
+@import "../../../../src/styles/settings.scss";
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 40px 15px;
+  border: solid 1px $favoritesBorderColor;
+  border-top: none;
+
+  &:last-child {
+    border-bottom-left-radius: $boxRadius;
+    border-bottom-right-radius: $boxRadius;
+  }
+
+  .desc {
+    display: flex;
+    align-items: center;
+
+    .icon {
+      @extend %animation;
+      color: $favoritesIconColor;
+      cursor: pointer;
+
+      &:hover {
+        color: $favoritesIconHoverColor;
+      }
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin: 0 50px;
+      object-fit: contain;
+    }
+
+    span {
+      padding: 0 50px;
+    }
+  }
+}

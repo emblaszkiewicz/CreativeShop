@@ -11,6 +11,7 @@
   }
 
   .workerDesc {
+    @extend %animation;
     padding: 15px 0;
     text-align: center;
     color: $workerBoxFontColor;
@@ -26,6 +27,7 @@
     }
 
     .icons {
+      @extend %animation;
       color: $workerBoxIconColor;
 
       .icon {

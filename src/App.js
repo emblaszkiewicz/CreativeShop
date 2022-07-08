@@ -10,6 +10,7 @@ import Shop from '../src/components/views/Shop/Shop';
 import About from '../src/components/views/About/About';
 import Contact from '../src/components/views/Contact/Contact';
 import Login from '../src/components/views/Login/Login';
+import Favorites from '../src/components/views/Favorites/Favorites';
 import ProductPage from '../src/components/views/ProductPage/ProductPage';
 
 const App = () => (
@@ -22,6 +23,7 @@ const App = () => (
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/login' element={<Login />} />
+        <Route path='/favorites' element={<Favorites />} />
         <Route path='/product/:id' element={<ProductPage />} />
       </Routes>
     </MainLayout>
