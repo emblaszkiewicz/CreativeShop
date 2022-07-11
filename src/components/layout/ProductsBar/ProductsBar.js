@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './ProductsBar.module.scss';
+import { useSelector } from 'react-redux';
 
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -7,30 +8,31 @@ import { NavLink } from 'react-router-dom';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
 
+import { randomProducts } from '../../../utils/randomProducts.js';
+
 import SectionTitle from '../../common/SectionTitle/SectionTitle';
 import ProductBox from '../../common/ProductBox/ProductBox';
 
-const ProductsBar = ({ title }) => (
-  <div className={styles.root}>
-    <SectionTitle title={title} />
-    <div className='container'>
-      <NavLink to='/product/1'>
-        <ProductBox />
-      </NavLink>
-      <NavLink to='/product/1'>
-        <ProductBox />
-      </NavLink>
-      <NavLink to='/product/1'>
-        <ProductBox />
-      </NavLink>
-      <NavLink to='/product/1'>
-        <ProductBox />
-      </NavLink>
+const ProductsBar = ({ selectBy, title }) => {
+
+  const products = useSelector(selectBy);
+
+  return (
+    <div className={styles.root}>
+      <SectionTitle title={title} />
+      <div className='container'>
+        {randomProducts(products).map(product =>
+          <NavLink key={product.id} to='/product/1'>
+            <ProductBox {...product} />
+          </NavLink>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 ProductsBar.propTypes = {
+  selectBy: PropTypes.func,
   title: PropTypes.string,
 };
 

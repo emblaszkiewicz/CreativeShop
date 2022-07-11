@@ -4,7 +4,7 @@ import styles from './Home.module.scss';
 import PropTypes from 'prop-types';
 // import clsx from 'clsx';
 
-// import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
+import { getProductsBySale, getProductsByFeatured } from '../../../../src/redux/productsRedux.js';
 
 import CarouselBar from '../../common/CarouselBar/CarouselBar';
 import ProductsBar from '../../layout/ProductsBar/ProductsBar';
@@ -16,8 +16,8 @@ import BrandsBar from '../../layout/BrandsBar/BrandsBar';
 const Home = () => (
   <div className={styles.root}>
     <CarouselBar />
-    <ProductsBar title='Sale' />
-    <ProductsBar title='Featured' />
+    <ProductsBar selectBy={getProductsBySale} title='Sale' />
+    <ProductsBar selectBy={getProductsByFeatured} title='Featured' />
     <OpinionsBar />
     <FeatureBar />
     <Banner />
