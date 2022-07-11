@@ -1,12 +1,42 @@
 @import '../../../../src/styles/settings.scss';
 
 .root {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  max-width: 1000px;
+  width: 80%;
 
   a {
     text-decoration: none;
     color: $productsContainerFontColor;
+  }
+
+  .pagesContainer {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      @extend %animation;
+      width: 12px;
+      height: 12px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background: grey;
+      cursor: pointer;
+
+      &.active {
+        background: red;
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .root {
+    margin: 30px auto;
   }
 }

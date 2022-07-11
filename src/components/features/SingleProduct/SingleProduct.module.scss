@@ -5,6 +5,7 @@
   position: relative;
 
   .icon {
+    @extend %animation;
     position: absolute;
     left: 20px;
     color: $singleProductIconColor;
@@ -31,9 +32,14 @@
     display: flex;
     flex-direction: column;
     width: 700px;
-    height: 300px;
     padding: 0 60px;
     border-left: solid 1px $singleProductBorderColor;
+
+    .descIcon {
+      @extend .icon;
+      left: unset;
+      right: 20px;
+    }
 
     h3 {
       position: relative;
@@ -46,6 +52,27 @@
         content: "";
         bottom: -5px;
         background: $singleProductBorderColor;
+      }
+    }
+
+    .sizes {
+      display: flex;
+
+      .size {
+        @extend %animation;
+        margin: 0 5px;
+        padding: 5px 15px;
+        text-transform: uppercase;
+        border: solid 1px $singleProductBorderColor;
+        border-radius: $boxRadius;
+        cursor: pointer;
+
+        &.active,
+        &:hover {
+          background: $singleProductSizeActiveColor;
+          border: solid 1px $singleProductSizeActiveColor;
+          color: $singleProductSizeActiveFont;
+        }
       }
     }
 

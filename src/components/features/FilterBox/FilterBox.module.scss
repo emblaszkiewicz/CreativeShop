@@ -2,7 +2,6 @@
 
 .root {
   width: 200px;
-  margin-top: 60px;
 
   .content {
     position: relative;
@@ -52,7 +51,7 @@
 
 @media (max-width: 1199px) {
   .root {
-    margin: auto;
+    margin: 0 auto;
 
     .content {
       .hamburger {

@@ -10,6 +10,7 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
 
 import ProductRow from '../../common/ProductRow/ProductRow';
+import Button from '../../common/Button/Button';
 
 const CartContent = () => (
   <div className={clsx('container', styles.root)}>
@@ -20,9 +21,13 @@ const CartContent = () => (
       </span>
       <span>Summary: $147</span>
     </div>
-    <ProductRow actionText='Recalculate' />
-    <ProductRow actionText='Recalculate' />
-    <ProductRow actionText='Recalculate' />
+    <ProductRow actionText='View product' />
+    <ProductRow actionText='View product' />
+    <ProductRow actionText='View product' />
+    <div className={styles.buttons}>
+      <Button>Recalculate cart</Button>
+      <Button>Confirm order</Button>
+    </div>
   </div>
 );
 

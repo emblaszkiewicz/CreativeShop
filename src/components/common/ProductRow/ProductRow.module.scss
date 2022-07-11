@@ -10,13 +10,9 @@
   border: solid 1px $productRowBorderColor;
   border-top: none;
 
-  &:last-child {
-    border-bottom-left-radius: $boxRadius;
-    border-bottom-right-radius: $boxRadius;
-  }
-
   .desc {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 
     .icon {
@@ -41,11 +37,16 @@
     }
 
     input {
+      margin: 15px 0;
       text-align: center;
       width: 30px;
       height: 30px;
       border: solid 1px $productRowBorderColor;
       outline: none;
+    }
+
+    .messageInput {
+      width: 200px;
     }
   }
 }

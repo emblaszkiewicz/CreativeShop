@@ -26,8 +26,6 @@ const Form = () => {
       subject: subject,
       message: message,
     };
-
-    console.log(messageParam);
   };
 
   return (

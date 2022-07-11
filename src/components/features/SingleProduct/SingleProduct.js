@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SingleProduct.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleLeft } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleLeft, faHeart } from '@fortawesome/free-solid-svg-icons';
 
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
@@ -21,9 +21,16 @@ const SingleProduct = () => (
       <img src='../../images/Products/tshirts/tshirtGrey.png' alt='' />
     </div>
     <div className={styles.description}>
+      <FontAwesomeIcon icon={faHeart} className={styles.descIcon} />
       <h3>T-shirt Grey</h3>
       <p><b>$49</b></p>
       <p>Aliquam vitae eros ac ligula auctor ultrices imperdiet a leo. Pellentesque hendrerit placerat odio, at interdum erat accumsan vulputate. Maecenas nec est sit amet justo finibus finibus. Pellentesque sodales ligula.</p>
+      <div className={styles.sizes}>
+        <span className={styles.size}>s</span>
+        <span className={styles.size}>m</span>
+        <span className={styles.size}>l</span>
+        <span className={clsx(styles.size, styles.active)}>xl</span>
+      </div>
       <p className={styles.quantity}>
         <span><b>Qty:</b></span>
         <input type='button' value='-' />

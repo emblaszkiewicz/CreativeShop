@@ -18,10 +18,15 @@ const ProductRow = ({ actionText }) => (
       <img src='../../images/Products/tshirts/tshirtGrey.png' alt='' />
       <span>T-shirt Grey</span>
       <span>$49</span>
-      {(actionText === 'Recalculate') &&
-        <span>
-          Quantity: <input type='text' placeholder='1' />
-        </span>
+      {(actionText === 'View product') &&
+        <>
+          <span>
+            Quantity: <input type='text' placeholder='1' />
+          </span>
+          <span>
+            <input className={styles.messageInput} type='text' placeholder='Your message' />
+          </span>
+        </>
       }
     </div>
     <Button>{actionText}</Button>

@@ -1,4 +1,4 @@
-@import '../../../../src/styles/settings.scss';
+@import "../../../../src/styles/settings.scss";
 
 .root {
   .header {
@@ -20,6 +20,23 @@
         color: $cartIconColor;
         font-size: ($baseSize * 1.5);
         padding-right: 20px;
+      }
+    }
+  }
+
+  .buttons {
+    width: 280px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1025px) {
+  .root {
+    .shipment {
+      form {
+        flex-direction: column;
       }
     }
   }
