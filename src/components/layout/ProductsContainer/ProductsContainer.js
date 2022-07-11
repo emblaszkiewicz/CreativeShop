@@ -7,20 +7,25 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 // import clsx from 'clsx';
 
-import { getAllProducts } from '../../../../src/redux/productsRedux.js';
+import { getAllProducts, getProductsByCategory } from '../../../../src/redux/productsRedux.js';
 
 import ProductBox from '../../common/ProductBox/ProductBox';
 
-const ProductsContainer = () => {
-
-  const products = useSelector(getAllProducts);
-  const pagesAmount = Math.ceil(products.length / 8);
+const ProductsContainer = ({ category }) => {
 
   const [activePage, setActivePage] = useState(0);
 
   const handlePageChange = newPage => {
     setActivePage(newPage);
   };
+
+  const products = useSelector(state => {
+    if (!category || category === 'all') {
+      return getAllProducts(state);
+    } else return getProductsByCategory(state, category);
+  });
+
+  const pagesAmount = Math.ceil(products.length / 8);
 
   const pages = [];
   for (let i = 0; i < pagesAmount; i++) {
@@ -47,6 +52,7 @@ const ProductsContainer = () => {
 };
 
 ProductsContainer.propTypes = {
+  category: PropTypes.string,
 };
 
 export default ProductsContainer;

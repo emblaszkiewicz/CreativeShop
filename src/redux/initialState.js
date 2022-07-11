@@ -1,6 +1,10 @@
 export const initialState = {
   categories: [
     {
+      id: 'all',
+      name: 'Show all',
+    },
+    {
       id: 'hats',
       name: 'Hats',
     },

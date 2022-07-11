@@ -1,18 +1,21 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
 import styles from './FilterBox.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faHeart, faShoppingBasket, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
 import PropTypes from 'prop-types';
 // import clsx from 'clsx';
 
-// import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
+import { getAllCategories } from '../../../../src/redux/categoriesRedux.js';
 
 // import Components;
 
-const FilterBox = () => {
+const FilterBox = ({ handleCategoryChange }) => {
+
+  const categories = useSelector(getAllCategories);
 
   const [visability, setVisability] = useState(false);
   const [width, setWidth] = useState('');
@@ -38,10 +41,13 @@ const FilterBox = () => {
         </div>
         {(visability || width > 1221) &&
           <ul>
-            <li>Show all</li>
-            <li>T-shirts</li>
-            <li>Hats</li>
-            <li>Mugs</li>
+            {categories.map(category =>
+              <li
+                key={category.id}
+                onClick={() => handleCategoryChange(category.id)}>
+                {category.name}
+              </li>
+            )}
           </ul>
         }
       </div>
@@ -50,6 +56,7 @@ const FilterBox = () => {
 };
 
 FilterBox.propTypes = {
+  handleCategoryChange: PropTypes.func,
 };
 
 export default FilterBox;

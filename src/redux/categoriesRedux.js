@@ -1,11 +1,10 @@
 // import { API_URL } from '../config';
 
 /* selectors */
-export const getAllProducts = ({ products }) => products;
-export const getProductsByCategory = ({ products }, category) => products.filter(product => product.category === category);
+export const getAllCategories = ({ categories }) => categories;
 
 /* action name creator */
-const reducerName = 'products';
+const reducerName = 'categories';
 const createActionName = name => `app/${reducerName}/${name}`;
 
 /* action types */
