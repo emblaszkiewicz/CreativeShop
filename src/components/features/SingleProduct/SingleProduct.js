@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SingleProduct.module.scss';
+import { useState } from 'react';
 import { useParams } from 'react-router';
 import { useSelector } from 'react-redux';
 
@@ -16,9 +17,27 @@ import Button from '../../common/Button/Button';
 
 const SingleProduct = () => {
 
+  const [ammount, setAmmount] = useState(1);
+
   const { id } = useParams();
 
   const product = useSelector(state => getProductById(state, id));
+
+  const handlePlus = () => {
+    setAmmount(ammount + 1);
+  };
+
+  const handleMinus = () => {
+    if(ammount > 1) {
+      setAmmount(ammount - 1);
+    }
+  };
+
+  const handleInput = e => {
+    if(e >= 1 || typeof e === 'number') {
+      setAmmount(parseInt(e));
+    } else setAmmount(ammount);
+  };
 
   return (
     <div className={clsx('container', styles.root)}>
@@ -40,9 +59,9 @@ const SingleProduct = () => {
         </div>
         <p className={styles.quantity}>
           <span><b>Qty:</b></span>
-          <input type='button' value='-' />
-          <input type='text' placeholder='1' />
-          <input type='button' value='+' />
+          <input type='button' value='-' onClick={handleMinus} />
+          <input type='text' value={ammount} placeholder={ammount} onChange={e => handleInput(e.target.value)} />
+          <input type='button' value='+' onClick={handlePlus} />
           <Button>Add to cart</Button>
         </p>
         <p><b>Category: </b>{product.category}</p>
