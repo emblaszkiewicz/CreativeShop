@@ -683,4 +683,44 @@ export const initialState = {
       twitter: 'https://twitter.com',
     },
   ],
+  banners: [
+    {
+      id: '33',
+      image: 'src=../../images/Banner/baner1.png',
+      title: 'Personalized T-shirts',
+      text: 'Proin sollicitudin rhoncus hendrerit. Suspendisse vitae risus nulla. Fusce eu risus sem. Nunc id nisi volutpat, interdum purus.',
+    },
+    {
+      id: '34',
+      image: 'src=../../images/Banner/baner2.png',
+      title: 'Personalized mugs',
+      text: 'Nulla lobortis urna diam, eu finibus dui cursus eu. Donec ut faucibus turpis. Nunc ut urna diam. Nam.',
+    },
+    {
+      id: '35',
+      image: 'src=../../images/Banner/baner3.png',
+      title: 'Personalized hats',
+      text: 'Aenean ut dui sit amet turpis lobortis lobortis ac vitae metus. Ut iaculis dui cursus convallis sodales. Nulla.',
+    },
+  ],
+  opinions: [
+    {
+      id: '36',
+      image: 'src=../../images/Opinions/opinion1.jpg',
+      name: 'Amanda Doe',
+      text: 'Aenean vehicula sollicitudin risus nec tincidunt. Etiam eu blandit ipsum. Proin et varius libero, eu tincidunt augue. Etiam aliquet posuere facilisis. Quisque eget neque a nunc cursus tincidunt ut porta.',
+    },
+    {
+      id: '37',
+      image: 'src=../../images/Opinions/opinion2.jpg',
+      name: 'John Doe',
+      text: 'Donec in auctor lorem. Integer eget nulla nec quam scelerisque venenatis sit amet ac sem. Nullam nec orci eu diam faucibus aliquet nec eget neque. Nunc et imperdiet est. Morbi.',
+    },
+    {
+      id: '38',
+      image: 'src=../../images/Opinions/opinion3.jpg',
+      name: 'Bob Doe',
+      text: 'Proin sodales scelerisque mi euismod accumsan. Donec sed vestibulum urna, in sodales felis. Aenean dignissim, lectus eget ullamcorper euismod, felis diam aliquam arcu, ac pretium magna nisl vel risus. Nulla.',
+    },
+  ],
 };
