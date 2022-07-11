@@ -40,7 +40,7 @@ const ProductsContainer = ({ category }) => {
         activePage * 8,
         (activePage + 1) * 8)
         .map(product =>
-          <NavLink key={product.id} to='/product/1'>
+          <NavLink key={product.id} to={`/product/${product.id}`}>
             <ProductBox {...product} />
           </NavLink>
         )}

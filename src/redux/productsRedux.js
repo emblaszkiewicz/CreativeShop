@@ -2,6 +2,7 @@
 
 /* selectors */
 export const getAllProducts = ({ products }) => products;
+export const getProductById = ({ products }, id) => products.find(product => product.id === id);
 export const getProductsByCategory = ({ products }, category) => products.filter(product => product.category === category);
 export const getProductsBySale = ({ products }) => products.filter(product => product.sale === true);
 export const getProductsByFeatured = ({ products }) => products.filter(product => product.featured === true);
