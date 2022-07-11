@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 const ProductBox = product => (
   <div className={styles.root}>
-    <img src={product.image} alt='' />
+    <img src={product.image} alt={product.name} />
     <div className={styles.boxContent}>
       <p>{product.name}</p>
       <span>${product.price}</span>

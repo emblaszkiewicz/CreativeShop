@@ -723,4 +723,30 @@ export const initialState = {
       text: 'Proin sodales scelerisque mi euismod accumsan. Donec sed vestibulum urna, in sodales felis. Aenean dignissim, lectus eget ullamcorper euismod, felis diam aliquam arcu, ac pretium magna nisl vel risus. Nulla.',
     },
   ],
+  brands: [
+    {
+      id: '39',
+      image: 'src=../../images/BrandsBar/brand1.png',
+    },
+    {
+      id: '40',
+      image: 'src=../../images/BrandsBar/brand2.png',
+    },
+    {
+      id: '41',
+      image: 'src=../../images/BrandsBar/brand3.png',
+    },
+    {
+      id: '42',
+      image: 'src=../../images/BrandsBar/brand4.png',
+    },
+    {
+      id: '43',
+      image: 'src=../../images/BrandsBar/brand5.png',
+    },
+    {
+      id: '44',
+      image: 'src=../../images/BrandsBar/brand6.png',
+    },
+  ],
 };

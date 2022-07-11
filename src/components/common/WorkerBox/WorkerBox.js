@@ -14,7 +14,7 @@ import { NavLink } from 'react-router-dom';
 
 const WorkerBox = employee => (
   <div className={styles.root}>
-    <img className={styles.workerImg} src={employee.image} alt='employee' />
+    <img className={styles.workerImg} src={employee.image} alt={employee.name} />
     <div className={styles.workerDesc}>
       <p>{employee.department}</p>
       <h4>{employee.name}</h4>

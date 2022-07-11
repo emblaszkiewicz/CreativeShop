@@ -19,7 +19,7 @@ const Banner = () => (
         <Button>Shop now</Button>
       </NavLink>
     </div>
-    <img src='../../images/Banner/tshirtOrange.png' alt='' />
+    <img src='../../images/Banner/tshirtOrange.png' alt='tshirtOrange' />
   </div>
 );
 

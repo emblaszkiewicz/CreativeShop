@@ -1,26 +1,29 @@
 import React from 'react';
 import styles from './BrandsBar.module.scss';
+import { useSelector } from 'react-redux/es/exports';
 
 import PropTypes from 'prop-types';
 // import clsx from 'clsx';
 
-// import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
+import { getAllBrands } from '../../../../src/redux/brandsRedux';
 
 // import Components;
 
-const BrandsBar = () => (
-  <div className={styles.root}>
-    <div className='container'>
-      <div className={styles.separator}></div>
-      <img src='../../images/BrandsBar/brand1.png' alt='' />
-      <img src='../../images/BrandsBar/brand1.png' alt='' />
-      <img src='../../images/BrandsBar/brand1.png' alt='' />
-      <img src='../../images/BrandsBar/brand1.png' alt='' />
-      <img src='../../images/BrandsBar/brand1.png' alt='' />
-      <img src='../../images/BrandsBar/brand1.png' alt='' />
+const BrandsBar = () => {
+
+  const brands = useSelector(getAllBrands);
+
+  return (
+    <div className={styles.root}>
+      <div className='container'>
+        <div className={styles.separator}></div>
+        {brands.map(brand =>
+          <img key={brand.id} src={brand.image} alt={brand.id} />
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 BrandsBar.propTypes = {
 };
