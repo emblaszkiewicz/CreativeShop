@@ -12,30 +12,32 @@ import { NavLink } from 'react-router-dom';
 
 // import Components;
 
-const WorkerBox = () => (
+const WorkerBox = employee => (
   <div className={styles.root}>
-    <img className={styles.workerImg} src='../../images/Employees/employee1.jpg' alt='employee' />
+    <img className={styles.workerImg} src={employee.image} alt='employee' />
     <div className={styles.workerDesc}>
-      <p>Finace Manager</p>
-      <h4>Miguel Rodrigez</h4>
+      <p>{employee.department}</p>
+      <h4>{employee.name}</h4>
       <div className={styles.icons}>
-        <NavLink to='/' target="_blank">
+        <a href={employee.linkedin} target="_blank">
           <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
-        </NavLink>
-        <NavLink to='/' target="_blank">
+        </a>
+        <a href={employee.facebook} target="_blank">
           <FontAwesomeIcon icon={faFacebook} className={styles.icon} />
-        </NavLink>
-        <NavLink to='/' target="_blank">
+        </a>
+        <a href={employee.instagram} target="_blank">
           <FontAwesomeIcon icon={faInstagram} className={styles.icon} />
-        </NavLink>
-        <NavLink to='/' target="_blank">
-          <FontAwesomeIcon icon={faTwitter} className={styles.icon} /></NavLink>
+        </a>
+        <a href={employee.twitter} target="_blank">
+          <FontAwesomeIcon icon={faTwitter} className={styles.icon} />
+        </a>
       </div>
     </div>
   </div>
 );
 
 WorkerBox.propTypes = {
+  employee: PropTypes.object,
 };
 
 export default WorkerBox;

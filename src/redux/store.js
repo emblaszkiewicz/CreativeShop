@@ -5,9 +5,11 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { initialState } from './initialState';
 
 import { reducer as productsReducer } from './productsRedux';
+import { reducer as employeesReducer } from './employeesRedux';
 
 const reducers = {
   products: productsReducer,
+  employees: employeesReducer,
 };
 
 // add blank reducers for initial state properties without reducers
