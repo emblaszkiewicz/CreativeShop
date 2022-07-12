@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './SingleProduct.module.scss';
 import { useState } from 'react';
 import { useParams } from 'react-router';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faHeart } from '@fortawesome/free-solid-svg-icons';
@@ -11,12 +11,13 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 
-import { getProductById } from '../../../../src/redux/productsRedux.js';
+import { getProductById, addToCart } from '../../../../src/redux/productsRedux.js';
 
 import Button from '../../common/Button/Button';
 
 const SingleProduct = () => {
 
+  const dispatch = useDispatch();
   const { id } = useParams();
 
   const product = useSelector(state => getProductById(state, id));
@@ -49,7 +50,11 @@ const SingleProduct = () => {
       singlePrice: product.price,
       totalPrice: product.price * ammount,
     };
+    dispatch(addToCart(productParam));
   };
+
+  const cartProducts = JSON.parse(localStorage.getItem('cart'));
+  console.log(cartProducts);
 
   return (
     <div className={clsx('container', styles.root)}>

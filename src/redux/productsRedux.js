@@ -24,6 +24,17 @@ const createActionName = name => `app/${reducerName}/${name}`;
 //STATE
 
 /* thunk creators */
+export const addToCart = productParam => {
+  return () => {
+    const cart = [];
+    const items = JSON.parse(localStorage.getItem('cart'));
+    if (items !== null) {
+      items.map(item => cart.push(item));
+    }
+    cart.push(productParam);
+    localStorage.setItem('cart', JSON.stringify(cart));
+  };
+};
 
 /* reducer */
 export const reducer = (statePart = [], action = {}) => {
