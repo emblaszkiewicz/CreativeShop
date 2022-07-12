@@ -17,26 +17,38 @@ import Button from '../../common/Button/Button';
 
 const SingleProduct = () => {
 
-  const [ammount, setAmmount] = useState(1);
-
   const { id } = useParams();
 
   const product = useSelector(state => getProductById(state, id));
+
+  const [ammount, setAmmount] = useState(1);
+  const [prodSize, setProdSize] = useState(product.sizes[0].size);
 
   const handlePlus = () => {
     setAmmount(ammount + 1);
   };
 
   const handleMinus = () => {
-    if(ammount > 1) {
+    if (ammount > 1) {
       setAmmount(ammount - 1);
     }
   };
 
   const handleInput = e => {
-    if(e >= 1 || typeof e === 'number') {
+    if (e >= 1 || typeof e === 'number') {
       setAmmount(parseInt(e));
     } else setAmmount(ammount);
+  };
+
+  const handleAddToBasket = () => {
+    const productParam = {
+      image: product.image,
+      name: product.name,
+      size: prodSize,
+      ammount: ammount,
+      singlePrice: product.price,
+      totalPrice: product.price * ammount,
+    };
   };
 
   return (
@@ -54,7 +66,10 @@ const SingleProduct = () => {
         <p>{product.desc}</p>
         <div className={styles.sizes}>
           {product.sizes.map(size =>
-            <span key={size.id} className={styles.size}>{size.size}</span>
+            <span key={size.id}
+              className={clsx(styles.size, size.size === prodSize ? styles.active : undefined)}
+              onClick={() => setProdSize(size.size)}>{size.size}
+            </span>
           )}
         </div>
         <p className={styles.quantity}>
@@ -62,7 +77,7 @@ const SingleProduct = () => {
           <input type='button' value='-' onClick={handleMinus} />
           <input type='text' value={ammount} placeholder={ammount} onChange={e => handleInput(e.target.value)} />
           <input type='button' value='+' onClick={handlePlus} />
-          <Button>Add to cart</Button>
+          <Button onClick={handleAddToBasket}>Add to cart</Button>
         </p>
         <p><b>Category: </b>{product.category}</p>
       </div>

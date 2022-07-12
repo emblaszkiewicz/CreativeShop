@@ -8,13 +8,13 @@ import clsx from 'clsx';
 
 // import Components;
 
-const Button = ({ variant, children }) => {
+const Button = ({ variant, onClick, children }) => {
 
   const classes = [];
   if(variant) classes.push(styles[variant],);
 
   return (
-    <button className={clsx(styles.root, classes)}>
+    <button className={clsx(styles.root, classes)} onClick={onClick}>
       {children}
     </button>
   );
@@ -22,6 +22,7 @@ const Button = ({ variant, children }) => {
 
 Button.propTypes = {
   variant: PropTypes.string,
+  onClick: PropTypes.func,
   children: PropTypes.node,
 };
 
