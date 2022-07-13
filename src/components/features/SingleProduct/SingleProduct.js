@@ -13,6 +13,7 @@ import clsx from 'clsx';
 
 import { getProductById } from '../../../../src/redux/productsRedux.js';
 import { addToCart } from '../../../../src/redux/cartRedux.js';
+import { addToFavorites } from '../../../../src/redux/favoritesRedux.js';
 
 import Button from '../../common/Button/Button';
 
@@ -42,17 +43,22 @@ const SingleProduct = () => {
     } else setAmount(amount);
   };
 
+  const productParam = {
+    id: id,
+    image: product.image,
+    name: product.name,
+    size: prodSize,
+    amount: amount,
+    singlePrice: product.price,
+    totalPrice: product.price * amount,
+  };
+
   const handleAddToBasket = () => {
-    const productParam = {
-      id: id,
-      image: product.image,
-      name: product.name,
-      size: prodSize,
-      amount: amount,
-      singlePrice: product.price,
-      totalPrice: product.price * amount,
-    };
     dispatch(addToCart(productParam));
+  };
+
+  const handleAddToFav = () => {
+    dispatch(addToFavorites(productParam));
   };
 
   return (
@@ -64,7 +70,7 @@ const SingleProduct = () => {
         <img src={product.image} alt='' />
       </div>
       <div className={styles.description}>
-        <FontAwesomeIcon icon={faHeart} className={styles.descIcon} />
+        <FontAwesomeIcon icon={faHeart} className={styles.descIcon} onClick={handleAddToFav} />
         <h3>{product.name}</h3>
         <p><b>${product.price}</b></p>
         <p>{product.desc}</p>

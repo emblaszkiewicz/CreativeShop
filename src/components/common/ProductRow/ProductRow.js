@@ -8,18 +8,14 @@ import { faClose } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 // import clsx from 'clsx';
 
-import { removeFromCart, editCartProduct } from '../../../../src/redux/cartRedux.js';
+import { editCartProduct } from '../../../../src/redux/cartRedux.js';
 
 import Button from '../Button/Button';
 import { NavLink } from 'react-router-dom';
 
-const ProductRow = ({ actionText, image, name, size, singlePrice, amount, id }) => {
+const ProductRow = ({ actionText, actionHandler, image, name, size, singlePrice, amount, id }) => {
 
   const dispatch = useDispatch();
-
-  const handleRemove = id => {
-    dispatch(removeFromCart(id));
-  };
 
   const handleEdit = (id, qty) => {
     dispatch(editCartProduct(id, qty));
@@ -28,7 +24,7 @@ const ProductRow = ({ actionText, image, name, size, singlePrice, amount, id }) 
   return (
     <div className={styles.root}>
       <div className={styles.desc}>
-        <FontAwesomeIcon icon={faClose} className={styles.icon} onClick={() => handleRemove(id)} />
+        <FontAwesomeIcon icon={faClose} className={styles.icon} onClick={() => actionHandler(id)} />
         <img src={image} alt={name} />
         <span>{name}</span>
         <span>Size: {size}</span>
@@ -50,6 +46,7 @@ const ProductRow = ({ actionText, image, name, size, singlePrice, amount, id }) 
 
 ProductRow.propTypes = {
   actionText: PropTypes.string,
+  actionHandler: PropTypes.func,
   image: PropTypes.string,
   name: PropTypes.string,
   size: PropTypes.string,

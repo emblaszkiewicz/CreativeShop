@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 
 import { CssBaseline } from '@material-ui/core';
 import { updateCart } from './redux/cartRedux';
+import { updateFavorites } from './redux/favoritesRedux';
 
 import MainLayout from '../src/components/layout/MainLayout/MainLayout';
 import Home from '../src/components/views/Home/Home';
@@ -24,6 +25,9 @@ const App = () => {
   useEffect(() => {
     if (localStorage.getItem('cart')) {
       dispatch(updateCart(JSON.parse(localStorage.getItem('cart'))));
+    }
+    if (localStorage.getItem('favorites')) {
+      dispatch(updateFavorites(JSON.parse(localStorage.getItem('favorites'))));
     }
   });
 
