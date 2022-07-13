@@ -14,6 +14,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding: 25px 0;
 
     .icon {
       @extend %animation;
@@ -34,6 +35,7 @@
 
     span {
       padding: 0 50px;
+      width: 170px;
     }
 
     input {
@@ -54,13 +56,12 @@
 @media (max-width: 824px) {
   .root {
     .desc {
-      padding: 25px 0;
       img {
         margin: 0 15px;
       }
 
       span {
-        padding: 0 15px;
+        padding: 5px 15px;
       }
     }
   }

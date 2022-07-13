@@ -13,9 +13,6 @@ const FavoritesLayout = () => (
     <div className={styles.header}>
       <span>Favorites</span>
     </div>
-    <ProductRow actionText='Add to cart' />
-    <ProductRow actionText='Add to cart' />
-    <ProductRow actionText='Add to cart' />
   </div>
 );
 

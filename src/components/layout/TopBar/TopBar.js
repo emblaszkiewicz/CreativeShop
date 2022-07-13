@@ -1,6 +1,7 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import styles from './TopBar.module.scss';
+import { useSelector } from 'react-redux/es/exports';
+import { useState, useEffect } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingBasket, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
@@ -9,14 +10,27 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 // import clsx from 'clsx';
 
-// import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
+import { getAllCart } from '../../../../src/redux/cartRedux.js';
+
+import { amountCounter } from '../../../utils/amountCounter';
+import { itemsCounter } from '../../../utils/itemsCounter';
 
 import Button from '../../common/Button/Button';
 
 const TopBar = () => {
 
+  const cartProducts = useSelector(getAllCart);
+
   const [visability, setVisability] = useState(false);
   const [width, setWidth] = useState('');
+  const [summary, setSummary] = useState(0);
+  const [items, setItems] = useState(0);
+
+  useEffect(() => {
+    setSummary(amountCounter(cartProducts));
+    setItems(itemsCounter(cartProducts));
+  }, [cartProducts]);
+
 
   useEffect(() => {
     window.addEventListener('resize', setWidth(window.innerWidth));
@@ -56,8 +70,8 @@ const TopBar = () => {
                 <NavLink to='/cart'>
                   <FontAwesomeIcon icon={faShoppingBasket} className={styles.icon} />
                 </NavLink>
-                <span className={styles.countner}>2</span>
-                <span className={styles.totalPrice}>$102.00</span>
+                <span className={styles.countner}>{items}</span>
+                <span className={styles.totalPrice}>${summary}</span>
               </div>
             </li>
           </ul>

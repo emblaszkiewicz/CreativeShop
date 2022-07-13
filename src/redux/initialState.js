@@ -749,4 +749,5 @@ export const initialState = {
       image: 'src=../../images/BrandsBar/brand6.png',
     },
   ],
+  cart: [],
 };

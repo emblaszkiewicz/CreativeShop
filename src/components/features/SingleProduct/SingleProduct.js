@@ -11,7 +11,8 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 
-import { getProductById, addToCart } from '../../../../src/redux/productsRedux.js';
+import { getProductById } from '../../../../src/redux/productsRedux.js';
+import { addToCart } from '../../../../src/redux/cartRedux.js';
 
 import Button from '../../common/Button/Button';
 
@@ -22,39 +23,37 @@ const SingleProduct = () => {
 
   const product = useSelector(state => getProductById(state, id));
 
-  const [ammount, setAmmount] = useState(1);
+  const [amount, setAmount] = useState(1);
   const [prodSize, setProdSize] = useState(product.sizes[0].size);
 
   const handlePlus = () => {
-    setAmmount(ammount + 1);
+    setAmount(amount + 1);
   };
 
   const handleMinus = () => {
-    if (ammount > 1) {
-      setAmmount(ammount - 1);
+    if (amount > 1) {
+      setAmount(amount - 1);
     }
   };
 
   const handleInput = e => {
     if (e >= 1 || typeof e === 'number') {
-      setAmmount(parseInt(e));
-    } else setAmmount(ammount);
+      setAmount(parseInt(e));
+    } else setAmount(amount);
   };
 
   const handleAddToBasket = () => {
     const productParam = {
+      id: id,
       image: product.image,
       name: product.name,
       size: prodSize,
-      ammount: ammount,
+      amount: amount,
       singlePrice: product.price,
-      totalPrice: product.price * ammount,
+      totalPrice: product.price * amount,
     };
     dispatch(addToCart(productParam));
   };
-
-  const cartProducts = JSON.parse(localStorage.getItem('cart'));
-  console.log(cartProducts);
 
   return (
     <div className={clsx('container', styles.root)}>
@@ -80,7 +79,7 @@ const SingleProduct = () => {
         <p className={styles.quantity}>
           <span><b>Qty:</b></span>
           <input type='button' value='-' onClick={handleMinus} />
-          <input type='text' value={ammount} placeholder={ammount} onChange={e => handleInput(e.target.value)} />
+          <input type='text' value={amount} placeholder={amount} onChange={e => handleInput(e.target.value)} />
           <input type='button' value='+' onClick={handlePlus} />
           <Button onClick={handleAddToBasket}>Add to cart</Button>
         </p>

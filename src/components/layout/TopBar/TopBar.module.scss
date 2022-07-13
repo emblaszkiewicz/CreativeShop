@@ -84,7 +84,9 @@
 
         .countner {
           margin: 0 5px;
-          padding: 2px 8px;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
           border-radius: 50%;
           background: $topBarCartCounterBg;
         }
