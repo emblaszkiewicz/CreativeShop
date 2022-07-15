@@ -5,6 +5,14 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 
 import { CssBaseline } from '@material-ui/core';
+
+import { loadProductsRequest } from './redux/productsRedux';
+import { loadBannersRequest } from './redux/bannersRedux';
+import { loadCategoriesRequest } from './redux/categoriesRedux';
+import { loadEmployeesRequest } from './redux/employeesRedux';
+import { loadOpinionsRequest } from './redux/opinionsRedux';
+import { loadBrandsRequest } from './redux/brandsRedux';
+
 import { updateCart } from './redux/cartRedux';
 import { updateFavorites } from './redux/favoritesRedux';
 
@@ -23,6 +31,13 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(loadProductsRequest());
+    dispatch(loadBannersRequest());
+    dispatch(loadCategoriesRequest());
+    dispatch(loadEmployeesRequest());
+    dispatch(loadOpinionsRequest());
+    dispatch(loadBrandsRequest());
+
     if (localStorage.getItem('cart')) {
       dispatch(updateCart(JSON.parse(localStorage.getItem('cart'))));
     }

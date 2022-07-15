@@ -89,7 +89,7 @@ const SingleProduct = () => {
           <input type='button' value='+' onClick={handlePlus} />
           <Button onClick={handleAddToBasket}>Add to cart</Button>
         </p>
-        <p><b>Category: </b>{product.category}</p>
+        <p><b>Category: </b>{product.category.name}</p>
       </div>
     </div>
   );

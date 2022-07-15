@@ -28,13 +28,11 @@ const ProductRow = ({ actionText, actionHandler, image, name, size, singlePrice,
         <img src={image} alt={name} />
         <span>{name}</span>
         <span>Size: {size}</span>
-        <span>${singlePrice}</span>
+        <span>Price: ${singlePrice}</span>
         {(actionText === 'View product') &&
-          <>
-            <span>
-              Qty: <input type='text' placeholder={amount} onChange={e => handleEdit(id, parseInt(e.target.value))} />
-            </span>
-          </>
+          <span>
+            Qty: <input type='text' placeholder={amount} onChange={e => handleEdit(id, parseInt(e.target.value))} />
+          </span>
         }
       </div>
       <NavLink to={`/product/${id}`}>
@@ -50,7 +48,7 @@ ProductRow.propTypes = {
   image: PropTypes.string,
   name: PropTypes.string,
   size: PropTypes.string,
-  singlePrice: PropTypes.number,
+  singlePrice: PropTypes.string,
   amount: PropTypes.number,
   id: PropTypes.string,
 };

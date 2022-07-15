@@ -11,6 +11,7 @@ import { reducer as bannersReducer } from './bannersRedux';
 import { reducer as opinionsReducer } from './opinionsRedux';
 import { reducer as cartReducer } from './cartRedux';
 import { reducer as favoritesReducer } from './favoritesRedux';
+import { reducer as brandsReducer } from './brandsRedux';
 
 const reducers = {
   products: productsReducer,
@@ -18,6 +19,7 @@ const reducers = {
   categories: categoriesReducer,
   banners: bannersReducer,
   opinions: opinionsReducer,
+  brands: brandsReducer,
   cart: cartReducer,
   favorites: favoritesReducer,
 };

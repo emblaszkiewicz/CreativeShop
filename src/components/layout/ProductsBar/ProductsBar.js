@@ -22,7 +22,7 @@ const ProductsBar = ({ selectBy, title }) => {
       <SectionTitle title={title} />
       <div className='container'>
         {randomProducts(products).map(product =>
-          <NavLink key={product.id} to={`/product/${product.id}`}>
+          <NavLink key={product._id} to={`/product/${product._id}`}>
             <ProductBox {...product} />
           </NavLink>
         )}

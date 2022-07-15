@@ -18,7 +18,7 @@ const BrandsBar = () => {
       <div className='container'>
         <div className={styles.separator}></div>
         {brands.map(brand =>
-          <img key={brand.id} src={brand.image} alt={brand.id} />
+          <img key={brand._id} src={brand.image} alt={brand.id} />
         )}
       </div>
     </div>

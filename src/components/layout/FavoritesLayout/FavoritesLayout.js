@@ -27,7 +27,7 @@ const FavoritesLayout = () => {
       </div>
       {
         favorites.map(favorite =>
-          <ProductRow key={favorite.id} {...favorite} actionText='View product' actionHandler={handleRemove} />
+          <ProductRow key={favorite.id} {...favorite} actionText='Go to product' actionHandler={handleRemove} />
         )
       }
     </div>

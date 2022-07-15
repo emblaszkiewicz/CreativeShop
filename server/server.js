@@ -4,6 +4,13 @@ const path = require('path');
 const mongoose = require('mongoose');
 
 // import routes
+const productsRoutes = require('./routes/products.routes');
+const bannersRoutes = require('./routes/banners.routes');
+const categoriesRoutes = require('./routes/categories.routes');
+const employeesRoutes = require('./routes/employees.routes');
+const opinionsRoutes = require('./routes/opinions.routes');
+const brandsRoutes = require('./routes/brands.routes');
+const ordersRoutes = require('./routes/orders.routes');
 
 const app = express();
 
@@ -13,7 +20,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 /* API ENDPOINTS */
-// app.use('/api', exampleRoutes);
+app.use('/api', productsRoutes);
+app.use('/api', bannersRoutes);
+app.use('/api', categoriesRoutes);
+app.use('/api', employeesRoutes);
+app.use('/api', opinionsRoutes);
+app.use('/api', brandsRoutes);
+app.use('/api', ordersRoutes);
 
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {

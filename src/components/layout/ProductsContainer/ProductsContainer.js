@@ -20,7 +20,7 @@ const ProductsContainer = ({ category }) => {
   };
 
   const products = useSelector(state => {
-    if (!category || category === 'all') {
+    if (!category || category === '62d063f0b44ccefe1a7279b8') {
       return getAllProducts(state);
     } else return getProductsByCategory(state, category);
   });
@@ -40,7 +40,7 @@ const ProductsContainer = ({ category }) => {
         activePage * 8,
         (activePage + 1) * 8)
         .map(product =>
-          <NavLink key={product.id} to={`/product/${product.id}`}>
+          <NavLink key={product._id} to={`/product/${product._id}`}>
             <ProductBox {...product} />
           </NavLink>
         )}

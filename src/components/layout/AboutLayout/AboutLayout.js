@@ -65,7 +65,7 @@ const AboutLayout = () => {
       </div>
       <div className={styles.row}>
         {employees.map(employee =>
-          <WorkerBox key={employee.id} {...employee} />
+          <WorkerBox key={employee._id} {...employee} />
         )}
       </div>
     </div>

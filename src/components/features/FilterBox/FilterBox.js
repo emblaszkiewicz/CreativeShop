@@ -43,8 +43,8 @@ const FilterBox = ({ handleCategoryChange }) => {
           <ul>
             {categories.map(category =>
               <li
-                key={category.id}
-                onClick={() => handleCategoryChange(category.id)}>
+                key={category._id}
+                onClick={() => handleCategoryChange(category._id)}>
                 {category.name}
               </li>
             )}

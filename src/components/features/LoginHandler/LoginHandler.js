@@ -20,12 +20,6 @@ const LoginHandler = () => (
         <span>Login with Google</span>
       </Button>
     </div>
-    <div className={styles.loginBox}>
-      <Button variant='login'>
-        <FontAwesomeIcon icon={faFacebookF} className={styles.icon} />
-        <span>Login with Facebook</span>
-      </Button>
-    </div>
   </div>
 );
 
