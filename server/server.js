@@ -41,9 +41,10 @@ app.use('*', (req, res) => {
 
 /* MONGOOSE */
 const NODE_ENV = process.env.NODE_ENV;
+const dblogin = process.env.dbpass;
 let dbUri = '';
 
-if(NODE_ENV === 'production') dbUri = 'url to remote db';
+if(NODE_ENV === 'production') dbUri = 'mongodb+srv://' + dblogin + '@cluster0.mjc1u1p.mongodb.net/CreativeShopDB?retryWrites=true&w=majority';
 else if(NODE_ENV === 'test') dbUri = 'mongodb://localhost:27017/CreativeShopDB';
 else dbUri = 'mongodb://localhost:27017/CreativeShopDB';
 
