@@ -6,6 +6,7 @@ export const initialState = {
   opinions: [],
   brands: [],
   cart: [],
-  favorites : [],
+  favorites: [],
+  orders: [],
   searchString: '',
 };

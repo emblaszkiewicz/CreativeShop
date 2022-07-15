@@ -13,6 +13,7 @@ import { reducer as cartReducer } from './cartRedux';
 import { reducer as favoritesReducer } from './favoritesRedux';
 import { reducer as brandsReducer } from './brandsRedux';
 import { reducer as searchReducer } from './searchRedux';
+import { reducer as orderReducer } from './ordersRedux';
 
 const reducers = {
   products: productsReducer,
@@ -23,6 +24,7 @@ const reducers = {
   brands: brandsReducer,
   cart: cartReducer,
   favorites: favoritesReducer,
+  orders: orderReducer,
   searchString: searchReducer,
 };
 

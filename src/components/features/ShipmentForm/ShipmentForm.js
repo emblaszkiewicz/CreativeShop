@@ -11,6 +11,7 @@ import Button from '../../common/Button/Button';
 // import clsx from 'clsx';
 
 import { updateCart } from '../../../../src/redux/cartRedux.js';
+import { addOrderRequest } from '../../../../src/redux/ordersRedux.js';
 
 // import Components;
 
@@ -27,7 +28,7 @@ const ShipmentForm = ({ action, cartProducts, message }) => {
   const [phone, setPhone] = useState();
 
   const handleSubmit = () => {
-    const order = {
+    const newOrder = {
       products: cartProducts,
       message: message,
       shippingAddress: {
@@ -37,7 +38,8 @@ const ShipmentForm = ({ action, cartProducts, message }) => {
         phone: phone,
       },
     };
-    console.log(order);
+    console.log(newOrder);
+    addOrderRequest(newOrder);
     //navigate('/');
   };
 
