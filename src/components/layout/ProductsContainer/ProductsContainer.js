@@ -7,11 +7,11 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 // import clsx from 'clsx';
 
-import { getAllProducts, getProductsByCategory } from '../../../../src/redux/productsRedux.js';
+import { getAllProducts, getProductsByCategory, getProductsBySearchString } from '../../../../src/redux/productsRedux.js';
 
 import ProductBox from '../../common/ProductBox/ProductBox';
 
-const ProductsContainer = ({ category }) => {
+const ProductsContainer = ({ category, searchString }) => {
 
   const [activePage, setActivePage] = useState(0);
 
@@ -20,7 +20,9 @@ const ProductsContainer = ({ category }) => {
   };
 
   const products = useSelector(state => {
-    if (!category || category === '62d063f0b44ccefe1a7279b8') {
+    if (searchString !== '') {
+      return getProductsBySearchString(state, searchString);
+    }else if (!category || category === '62d063f0b44ccefe1a7279b8') {
       return getAllProducts(state);
     } else return getProductsByCategory(state, category);
   });
@@ -53,6 +55,7 @@ const ProductsContainer = ({ category }) => {
 
 ProductsContainer.propTypes = {
   category: PropTypes.string,
+  searchString: PropTypes.string,
 };
 
 export default ProductsContainer;

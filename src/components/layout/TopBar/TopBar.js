@@ -16,6 +16,7 @@ import { amountCounter } from '../../../utils/amountCounter';
 import { itemsCounter } from '../../../utils/itemsCounter';
 
 import Button from '../../common/Button/Button';
+import Search from '../../features/Search/Search';
 
 const TopBar = () => {
 
@@ -50,10 +51,7 @@ const TopBar = () => {
       <div className={styles.logo}>Creative Shop</div>
       {(visability || width > 767) &&
         <>
-          <div className={styles.searchBar}>
-            <input type='text' placeholder='Search products...' />
-            <Button variant='searchBtn'>Search</Button>
-          </div>
+          <Search />
           <ul>
             <li>
               <NavLink to='/login'>

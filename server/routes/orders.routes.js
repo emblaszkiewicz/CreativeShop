@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const OrdersController = require('../controllers/orders.controller');
 
-router.get('/banners', OrdersController.getAll);
-router.post('/banners', OrdersController.sendOrder);
+router.get('/orders', OrdersController.getAll);
+router.post('/orders', OrdersController.sendOrder);
 
 module.exports = router;

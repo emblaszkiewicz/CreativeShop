@@ -12,6 +12,7 @@ import { reducer as opinionsReducer } from './opinionsRedux';
 import { reducer as cartReducer } from './cartRedux';
 import { reducer as favoritesReducer } from './favoritesRedux';
 import { reducer as brandsReducer } from './brandsRedux';
+import { reducer as searchReducer } from './searchRedux';
 
 const reducers = {
   products: productsReducer,
@@ -22,6 +23,7 @@ const reducers = {
   brands: brandsReducer,
   cart: cartReducer,
   favorites: favoritesReducer,
+  searchString: searchReducer,
 };
 
 // add blank reducers for initial state properties without reducers

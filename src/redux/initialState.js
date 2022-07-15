@@ -7,4 +7,5 @@ export const initialState = {
   brands: [],
   cart: [],
   favorites : [],
+  searchString: '',
 };

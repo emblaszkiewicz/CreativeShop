@@ -1,12 +1,14 @@
 import axios from 'axios';
 import { API_URL } from '../config';
+import strContains from '../utils/strContains';
 
 /* selectors */
 export const getAllProducts = ({ products }) => products;
 export const getProductById = ({ products }, id) => products.find(product => product._id === id);
-export const getProductsByCategory = ({ products }, category) => products.filter(product => product.category === category);
+export const getProductsByCategory = ({ products }, category) => products.filter(product => product.category._id === category);
 export const getProductsBySale = ({ products }) => products.filter(product => product.sale === true);
 export const getProductsByFeatured = ({ products }) => products.filter(product => product.featured === true);
+export const getProductsBySearchString = ({ products }, ggg) => products.filter(product => strContains(product.name, ggg));
 
 /* action name creator */
 const reducerName = 'products';
