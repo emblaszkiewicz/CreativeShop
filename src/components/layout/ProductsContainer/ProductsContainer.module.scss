@@ -3,6 +3,7 @@
 .root {
   position: relative;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   width: 80%;
 
@@ -14,22 +15,29 @@
   .pagesContainer {
     position: absolute;
     display: flex;
+    align-items: center;
     top: 0;
-    right: 0;
+    right: -30px;
     padding: 0;
     list-style: none;
 
     li {
       @extend %animation;
-      width: 12px;
-      height: 12px;
+      width: 20px;
+      height: 25px;
       margin: 0 5px;
-      border-radius: 50%;
-      background: grey;
+      text-align: center;
+      line-height: 25px;
+      border-radius: $boxRadius;
+      border: solid 1px $productsContainerPagesBorderBg;
+      background: $productsContainerPagesBackground;
       cursor: pointer;
 
-      &.active {
-        background: red;
+      &.active,
+      &:hover {
+        color: $productsContainerActiveFontColor;
+        background: $productsContainerActive;
+        border: solid 1px $productsContainerActiveBorder;
       }
     }
   }
@@ -38,5 +46,11 @@
 @media (max-width: 1199px) {
   .root {
     margin: 30px auto;
+
+    .pagesContainer {
+      top: -15px;
+      right: unset;
+      margin-bottom: 15px;
+    }
   }
 }

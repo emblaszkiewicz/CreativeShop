@@ -44,7 +44,7 @@ const FilterBox = ({ handleCategoryChange }) => {
             {categories.map(category =>
               <li
                 key={category._id}
-                onClick={() => handleCategoryChange(category._id)}>
+                onClick={() => {handleCategoryChange(category._id); setVisability(false);}}>
                 {category.name}
               </li>
             )}

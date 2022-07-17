@@ -14,7 +14,7 @@ const Button = ({ variant, onClick, children }) => {
   if(variant) classes.push(styles[variant],);
 
   return (
-    <button className={clsx(styles.root, classes)} onClick={onClick}>
+    <button className={clsx(styles.root, classes)} aria-label={children} onClick={onClick}>
       {children}
     </button>
   );

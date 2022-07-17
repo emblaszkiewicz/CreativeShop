@@ -22,7 +22,7 @@ const ProductsContainer = ({ category, searchString }) => {
   const products = useSelector(state => {
     if (searchString !== '') {
       return getProductsBySearchString(state, searchString);
-    }else if (!category || category === '62d063f0b44ccefe1a7279b8') {
+    } else if (!category || category === '62d063f0b44ccefe1a7279b8') {
       return getAllProducts(state);
     } else return getProductsByCategory(state, category);
   });
@@ -32,7 +32,7 @@ const ProductsContainer = ({ category, searchString }) => {
   const pages = [];
   for (let i = 0; i < pagesAmount; i++) {
     pages.push(
-      <li key={i} onClick={() => handlePageChange(i)} className={i === activePage ? styles.active : ''}></li>
+      <li key={i} onClick={() => handlePageChange(i)} className={i === activePage ? styles.active : ''}><span>{i + 1}</span></li>
     );
   }
 
@@ -42,11 +42,12 @@ const ProductsContainer = ({ category, searchString }) => {
         activePage * 8,
         (activePage + 1) * 8)
         .map(product =>
-          <NavLink key={product._id} to={`/product/${product._id}`}>
+          <NavLink key={product._id} to={`/product/${product._id}`} onClick={() => window.scrollTo(0, 0)}>
             <ProductBox {...product} />
           </NavLink>
         )}
       <ul className={styles.pagesContainer}>
+        Page:
         {pages}
       </ul>
     </div>

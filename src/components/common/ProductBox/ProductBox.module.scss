@@ -58,7 +58,10 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 767px) {
+  a {
+    margin: auto;
+  }
   .root {
     margin: 15px auto;
   }

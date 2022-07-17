@@ -25,7 +25,7 @@ const AboutLayout = () => {
           <p>Praesent auctor pharetra risus, quis sagittis nulla efficitur quis. In pretium vitae.</p>
           <p>Maecenas rutrum blandit leo, sit amet pretium tortor convallis at. Nulla feugiat turpis ac quam pulvinar, pellentesque porttitor diam condimentum. Etiam bibendum dolor sit amet dapibus posuere. Donec eget magna luctus, fringilla urna at, malesuada purus. Class aptent taciti sociosqu ad litora torquent per.</p>
         </div>
-        <img className={styles.headImage} src='../../images/AboutPage/meeting.jpg' alt='meeting' />
+        <img className={styles.headImage} src='../../images/AboutPage/meeting.webp' alt='meeting' />
       </div>
       <div className={styles.row}>
         <div className={styles.headText}>
@@ -54,8 +54,8 @@ const AboutLayout = () => {
         </div>
       </div>
       <div className={styles.row}>
-        <img className={styles.headImage} src='../../images/AboutPage/meeting1.jpg' alt='meeting1' />
-        <img className={styles.headImage} src='../../images/AboutPage/meeting1.jpg' alt='meeting2' />
+        <img className={styles.headImage} src='../../images/AboutPage/meeting1.webp' alt='meeting1' />
+        <img className={styles.headImage} src='../../images/AboutPage/meeting1.webp' alt='meeting2' />
       </div>
       <div className={styles.row}>
         <div className={styles.headText}>

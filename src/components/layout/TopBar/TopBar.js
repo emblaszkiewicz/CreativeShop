@@ -54,18 +54,21 @@ const TopBar = () => {
           <Search />
           <ul>
             <li>
-              <NavLink to='/login'>
+              <NavLink to='/login' onClick={() => setVisability(false)}>
+                <span>login</span>
                 <FontAwesomeIcon icon={faUser} className={styles.icon} />
               </NavLink>
             </li>
             <li>
-              <NavLink to='/favorites'>
+              <NavLink to='/favorites' onClick={() => setVisability(false)}>
+                <span>favorites</span>
                 <FontAwesomeIcon icon={faHeart} className={styles.icon} />
               </NavLink>
             </li>
             <li>
               <div className={styles.cart}>
-                <NavLink to='/cart'>
+                <NavLink to='/cart' onClick={() => setVisability(false)}>
+                  <span>cart</span>
                   <FontAwesomeIcon icon={faShoppingBasket} className={styles.icon} />
                 </NavLink>
                 <span className={styles.countner}>{items}</span>

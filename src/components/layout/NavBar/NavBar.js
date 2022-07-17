@@ -12,10 +12,18 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => (
   <nav className={styles.root}>
     <ul>
-      <NavLink to='/'>Home</NavLink>
-      <NavLink to='/shop'>Shop</NavLink>
-      <NavLink to='/about'>About us</NavLink>
-      <NavLink to='/contact'>Contact</NavLink>
+      <li>
+        <NavLink to='/'>Home</NavLink>
+      </li>
+      <li>
+        <NavLink to='/shop'>Shop</NavLink>
+      </li>
+      <li>
+        <NavLink to='/about'>About us</NavLink>
+      </li>
+      <li>
+        <NavLink to='/contact'>Contact</NavLink>
+      </li>
     </ul>
   </nav>
 );

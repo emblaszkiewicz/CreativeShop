@@ -13,32 +13,32 @@
     list-style: none;
     column-gap: 50px;
 
-    a {
+    li {
       padding: 15px 0;
-      position: relative;
-      text-transform: uppercase;
-      text-decoration: none;
 
-      &.active {
-        color: green;
-      }
+      a {
+        padding: 15px 0;
+        position: relative;
+        text-transform: uppercase;
+        text-decoration: none;
 
-      &:visited {
-        color: inherit;
-      }
+        &:visited {
+          color: inherit;
+        }
 
-      &::after {
-        @extend %animation;
-        position: absolute;
-        content: "";
-        width: 0;
-        border-bottom: solid 3px $navBarActiveColor;
-        left: 0;
-        bottom: 0;
-      }
+        &::after {
+          @extend %animation;
+          position: absolute;
+          content: "";
+          width: 0;
+          border-bottom: solid 3px $navBarActiveColor;
+          left: 0;
+          bottom: 0;
+        }
 
-      &:hover::after {
-        width: 100%;
+        &:hover::after {
+          width: 100%;
+        }
       }
     }
   }
