@@ -16,7 +16,7 @@ const Footer = () => (
   <div className={styles.root}>
     <div className={clsx('container', styles.footerContent)}>
       <div className={styles.footerBox}>
-        <h3>Account</h3>
+        <h1>Account</h1>
         <ul>
           <li>
             <NavLink to='/login'>Log in</NavLink>
@@ -27,7 +27,7 @@ const Footer = () => (
         </ul>
       </div>
       <div className={styles.footerBox}>
-        <h3>Payment</h3>
+        <h1>Payment</h1>
         <ul>
           <li>
             <FontAwesomeIcon icon={faCreditCard} className={styles.icon} />
@@ -37,7 +37,7 @@ const Footer = () => (
         </ul>
       </div>
       <div className={styles.footerBox}>
-        <h3>Our address</h3>
+        <h1>Our address</h1>
         <ul>
           <li>
             <FontAwesomeIcon icon={faEnvelopeOpen} className={styles.icon} />
@@ -54,7 +54,7 @@ const Footer = () => (
         </ul>
       </div>
       <div className={styles.footerBox}>
-        <h3>Newsletter</h3>
+        <h1>Newsletter</h1>
         <ul>
           <li>Aliquam vestibulum elit et risus pulvinar, nec pellentesque tortor dictum. Cras vitae.</li>
           <li>
