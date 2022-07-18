@@ -28,6 +28,9 @@ app.use('/api', opinionsRoutes);
 app.use('/api', brandsRoutes);
 app.use('/api', ordersRoutes);
 
+app.use('/auth', require('./routes/auth.routes'));
+app.use('/user', require('./routes/user.routes'));
+
 /* API ERROR PAGES */
 app.use('/api', (req, res) => {
   res.status(404).send({ post: 'Not found...' });
