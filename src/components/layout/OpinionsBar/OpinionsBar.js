@@ -17,7 +17,7 @@ const OpinionsBar = () => {
 
   return (
     <div className={styles.root}>
-      <Carousel interval={4500} autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false} showStatus={false}>
+      <Carousel interval={4500} swipeable={false} autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false} showStatus={false}>
         {opinions.map(opinion =>
           <div key={opinion._id} className={styles.content}>
             <img src={opinion.image} alt={opinion.name} />

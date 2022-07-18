@@ -18,7 +18,7 @@ const CarouselBar = () => {
 
   return (
     <div className={styles.root}>
-      <Carousel interval={4500} autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false} showStatus={false}>
+      <Carousel interval={4500} swipeable={false} autoPlay={true} infiniteLoop={true} showThumbs={false} showArrows={false} showStatus={false}>
         {banners.map(banner =>
           <div key={banner._id}>
             <img src={banner.image} alt={banner.title} />
