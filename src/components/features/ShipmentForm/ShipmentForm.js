@@ -1,8 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import styles from './ShipmentForm.module.scss';
 
 import PropTypes from 'prop-types';
@@ -10,15 +8,11 @@ import Button from '../../common/Button/Button';
 
 // import clsx from 'clsx';
 
-import { updateCart } from '../../../../src/redux/cartRedux.js';
 import { addOrderRequest } from '../../../../src/redux/ordersRedux.js';
 
 // import Components;
 
 const ShipmentForm = ({ action, cartProducts, message }) => {
-
-  const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const { register, handleSubmit: validate, formState: { errors } } = useForm();
 
@@ -38,9 +32,7 @@ const ShipmentForm = ({ action, cartProducts, message }) => {
         phone: phone,
       },
     };
-    console.log(newOrder);
     addOrderRequest(newOrder);
-    //navigate('/');
   };
 
   return (

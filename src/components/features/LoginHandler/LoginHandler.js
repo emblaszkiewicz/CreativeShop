@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './LoginHandler.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import Button from '../../common/Button/Button';
 

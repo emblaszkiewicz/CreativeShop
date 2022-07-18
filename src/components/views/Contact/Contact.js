@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Contact.module.scss';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 // import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';

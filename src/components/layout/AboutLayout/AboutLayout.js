@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import { faServer, faBoxOpen, faLayerGroup } from '@fortawesome/free-solid-svg-icons';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { getAllEmployees } from '../../../../src/redux/employeesRedux.js';

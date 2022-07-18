@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 // import clsx from 'clsx';
 
 import { updateSearchString } from '../../../../src/redux/searchRedux.js';

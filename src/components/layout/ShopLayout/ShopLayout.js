@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { getSearchString, updateSearchString } from '../../../../src/redux/searchRedux.js';

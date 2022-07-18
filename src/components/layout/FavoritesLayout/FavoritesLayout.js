@@ -3,7 +3,7 @@ import styles from './FavoritesLayout.module.scss';
 import { useSelector } from 'react-redux/es/exports';
 import { useDispatch } from 'react-redux';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { getAllFavorites, removeFromFavorites } from '../../../../src/redux/favoritesRedux.js';

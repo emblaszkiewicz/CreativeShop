@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowAltCircleLeft, faHeart } from '@fortawesome/free-solid-svg-icons';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 

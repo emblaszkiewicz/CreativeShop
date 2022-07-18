@@ -4,7 +4,7 @@ import styles from './Footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCreditCard, faEnvelopeOpen, faLocationDot, faPhone, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 

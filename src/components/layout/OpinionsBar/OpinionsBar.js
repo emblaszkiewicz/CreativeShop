@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux/es/exports';
 import 'react-responsive-carousel/lib/styles/carousel.css';
 import { Carousel } from 'react-responsive-carousel';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 // import clsx from 'clsx';
 
 import { getAllOpinions } from '../../../../src/redux/opinionsRedux';

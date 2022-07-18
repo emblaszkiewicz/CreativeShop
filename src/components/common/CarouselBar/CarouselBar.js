@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import 'react-responsive-carousel/lib/styles/carousel.css';
 import { Carousel } from 'react-responsive-carousel';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 // import clsx from 'clsx';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Banner.module.scss';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import clsx from 'clsx';
 

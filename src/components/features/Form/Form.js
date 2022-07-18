@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import styles from './Form.module.scss';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
@@ -20,12 +20,12 @@ const Form = () => {
   const [message, setMessage] = useState();
 
   const handleSubmit = () => {
-    const messageParam = {
+    /*const messageParam = {
       name: name,
       email: email,
       subject: subject,
       message: message,
-    };
+    };*/
   };
 
   return (

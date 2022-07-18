@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingBasket, faBars, faClose } from '@fortawesome/free-solid-svg-icons';
 
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 // import clsx from 'clsx';
 
@@ -15,7 +15,6 @@ import { getAllCart } from '../../../../src/redux/cartRedux.js';
 import { amountCounter } from '../../../utils/amountCounter';
 import { itemsCounter } from '../../../utils/itemsCounter';
 
-import Button from '../../common/Button/Button';
 import Search from '../../features/Search/Search';
 
 const TopBar = () => {

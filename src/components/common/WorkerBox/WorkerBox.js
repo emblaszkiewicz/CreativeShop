@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 // import clsx from 'clsx';
 
 // import { reduxSelector, reduxActionCreator } from '../../../../src/redux/exampleRedux.js';
