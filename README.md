@@ -6,13 +6,12 @@ When all packages are installed you can run app in the development mode by ‘ya
 All server source files are in ‘server’ folder, application source files are located in ‘src’ & ‘public’ folder.</br></br>
 In dev folder is template for components to use by blueprint-templates.
 ## Used technologies
-- React-Router to switch between pages</br>
-- SCSS compiler for components styles</br>
-- Redux App state</br>
-- Redux-Thunk to communication with API</br>
-- Axios to request from API</br>
-- Express for server</br>
-- MongoDB for data</br>
-- MongoDB for data</br>
+- React-Router</br>
+- SCSS</br>
+- Redux</br>
+- Redux-Thunk</br>
+- Axios</br>
+- Express</br>
+- MongoDB</br>
 ## Short app description
 Creative-Shop offers personalized mugs, hats and t-shirts. You can browse all products or sort them by category on page ‘/shop’. Cart content is saved in localStorage, so when you run app again the cart content won't disappear, the same situation is with favorites. You can send order to API.
